@@ -64,6 +64,21 @@ h1 {
   background: #4834d4;
 }
 
+#add-phrase-btn {
+  background: #149224;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#add-phrase-btn:hover {
+  background: #1cb330;
+}
+
 /* ===== Responsivo ===== */
 @media (max-width: 600px) {
   .container {
