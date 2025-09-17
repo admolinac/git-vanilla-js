@@ -6,6 +6,8 @@ const phrases = [
     "Un príncipe vendrá. Si no viene, un príncipe eres tú."
 ];
 
+let counter = 0;
+
 const button = document.getElementById('generate-btn');
 const addPhraseBtn = document.getElementById('add-phrase-btn');
 const phraseContainer = document.getElementById('phrase-container');
@@ -26,6 +28,12 @@ function addPhraseToArray(newPhrase) {
 button.addEventListener('click', () => {
     const randomPhrase = getRandomPhrase();
     phraseContainer.textContent = randomPhrase;
+    counter++;
+    document.getElementById('counter').textContent = `Frases generadas: ${counter}`;
+
+    const color1 = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    const color2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.background = `linear-gradient(135deg, ${color1}, ${color2})`;
 });
 
 addPhraseBtn.addEventListener('click', () => {
