@@ -1,0 +1,87 @@
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Estilos generales ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+/* ===== Contenedor principal ===== */
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== Título ===== */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* ===== Contenedor de frases ===== */
+#phrase-container {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 2px dashed #9face6;
+  border-radius: 8px;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Botón ===== */
+#generate-btn {
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#generate-btn:hover {
+  background: #4834d4;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #phrase-container {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  #generate-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
