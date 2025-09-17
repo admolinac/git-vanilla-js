@@ -7,6 +7,7 @@ const phrases = [
 ];
 
 const button = document.getElementById('generate-btn');
+const addPhraseBtn = document.getElementById('add-phrase-btn');
 const phraseContainer = document.getElementById('phrase-container');
 
 function getRandomPhrase() {
@@ -14,7 +15,20 @@ function getRandomPhrase() {
     return phrases[randomIndex];
 }
 
+function addPhraseToArray(newPhrase) {
+    if (newPhrase && !phrases.includes(newPhrase)) {
+        phrases.push(newPhrase);
+        window.alert("Nueva frase agregada.");
+    }
+    return;
+}
+
 button.addEventListener('click', () => {
     const randomPhrase = getRandomPhrase();
     phraseContainer.textContent = randomPhrase;
+});
+
+addPhraseBtn.addEventListener('click', () => {
+    const newPhrase = window.prompt("Ingrese una nueva frase:");
+    addPhraseToArray(newPhrase);
 });
